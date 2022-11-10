@@ -16,4 +16,5 @@ jobs:
       with:
         swift-version: ${{ matrix.swift }}
         upload-to-release: true
+        bin-name: maple-diffusion
         repo-token: ${{ secrets.GITHUB_TOKEN }}
