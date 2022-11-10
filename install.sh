@@ -45,7 +45,7 @@ else
   unzip -q $archive -d $TMP/
 fi
 
-binary=$TMP/maple-diffusion-cli
+binary=$TMP/maple-diffusion
 
 dst="/usr/local/bin"
 echo "Install into $dst/maple-diffusion"
