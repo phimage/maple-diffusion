@@ -14,6 +14,8 @@ Command line tool for [mortenjust/maple-diffusion](https://github.com/mortenjust
     maple-diffusion --model /path/of/model --ouput myimage.png "a cat"
 ```
 
+For model see [mortenjust/maple-diffusion](https://github.com/mortenjust/maple-diffusion)
+
 ## Install
 
 Just download from release if any, or build it (and move it to `PATH`)
