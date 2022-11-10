@@ -1,9 +1,9 @@
 #!/bin/bash
 
 if [[ "$OSTYPE" == "darwin"* ]]; then  # Mac OSX
-    bin=.build/apple/Products/Release/maple-diffusion-cli
+    bin=.build/apple/Products/Release/maple-diffusion
 else
-    bin=.build/release/maple-diffusion-cli
+    bin=.build/release/maple-diffusion
 fi
 
 rm -f $bin
