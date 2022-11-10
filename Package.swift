@@ -3,12 +3,12 @@
 import PackageDescription
 
 let package = Package(
-    name: "{{ tmplr.repo_name }}",
+    name: "maple-diffusion",
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .executable(
-            name: "{{ tmplr.repo_name }}",
-            targets: ["{{ tmplr.repo_name }}"])
+            name: "maple-diffusion",
+            targets: ["maple-diffusion"])
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.0"),
@@ -16,7 +16,7 @@ let package = Package(
     ],
     targets: [
         .executableTarget(
-            name: "{{ tmplr.repo_name }}",
+            name: "maple-diffusion",
             dependencies: [
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
                 "XcodeProjKit"],
