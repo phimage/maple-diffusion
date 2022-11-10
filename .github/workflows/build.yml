@@ -38,7 +38,7 @@ jobs:
           echo "$PATH" >> $GITHUB_PATH
       - run: rm -f .swift-version
       - name: Install Swift
-        run: swiftenv install "5.5" --skip-existing
+        run: swiftenv install "5.7" --skip-existing
       - name: Build
         run: ./build.sh
       - name: Run tests
