@@ -4,7 +4,7 @@ TMP="${TMPDIR}"
 if [ "x$TMP" = "x" ]; then
   TMP="/tmp/"
 fi
-TMP="${TMP}maple-diffusion.$$"
+TMP="${TMP}maple-diffusion-cli.$$"
 rm -rf "$TMP" || true
 mkdir "$TMP"
 if [ $? -ne 0 ]; then
@@ -25,19 +25,19 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
     exit 1
   fi
   if [ -z "$(which swift)" ]; then
-    archiveName=maple-diffusion-x86_64-static-ubuntu-$DISTRIB_CODENAME.zip
+    archiveName=maple-diffusion-cli-x86_64-static-ubuntu-$DISTRIB_CODENAME.zip
   else
-    archiveName=maple-diffusion-X86_64-dynamic_swift_5.7-ubuntu-$DISTRIB_CODENAME.zip
+    archiveName=maple-diffusion-cli-X86_64-dynamic_swift_5.7-ubuntu-$DISTRIB_CODENAME.zip
   fi
 elif [[ "$OSTYPE" == "darwin"* ]]; then  # Mac OSX
-  archiveName=maple-diffusion.zip
+  archiveName=maple-diffusion-cli.zip
 else
   echo "Unknown os type $OSTYPE, macOS or ubuntu"
   exit 1
 fi
 
 archive=$TMP/$archiveName
-curl -sL https://github.com/phimage/maple-diffusion/releases/latest/download/$archiveName -o $archive
+curl -sL https://github.com/phimage/maple-diffusion-cli/releases/latest/download/$archiveName -o $archive
 
 if [[ "$OSTYPE" == "darwin"* ]]; then  # Mac OSX
   unzip -q $archive -d $TMP/
@@ -45,11 +45,11 @@ else
   unzip -q $archive -d $TMP/
 fi
 
-binary=$TMP/maple-diffusion 
+binary=$TMP/maple-diffusion-cli
 
 dst="/usr/local/bin"
-echo "Install into $dst/maple-diffusion"
-sudo rm -f $dst/maple-diffusion
+echo "Install into $dst/maple-diffusion-cli"
+sudo rm -f $dst/maple-diffusion-cli
 sudo cp $binary $dst/
 
 rm -rf "$TMP"
