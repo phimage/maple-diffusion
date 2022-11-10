@@ -1,4 +1,3 @@
-
 import Foundation
 import MapleDiffusion
 import ArgumentParser
@@ -9,7 +8,7 @@ struct MapleDiffusion: AsyncParsableCommand {
     @Option(name: .shortAndLong, help: "The model")
     var model: String
 
-    @Option(name: .shortAndLong,help: "Output file")
+    @Option(name: .shortAndLong, help: "Output file")
     var output: String?
 
     @Argument(help: "The sentence")
