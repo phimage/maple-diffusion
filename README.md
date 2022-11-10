@@ -11,7 +11,7 @@ Command line tool for [mortenjust/maple-diffusion](https://github.com/mortenjust
 ## Usage
 
 ```bash
-    maple-diffusion-cli --model /path/of/model --ouput myimage.png "a cat"
+    maple-diffusion --model /path/of/model --ouput myimage.png "a cat"
 ```
 
 ## Install
