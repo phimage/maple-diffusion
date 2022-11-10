@@ -1,9 +1,9 @@
 #!/bin/bash
 
 if [[ "$OSTYPE" == "darwin"* ]]; then  # Mac OSX
-    cmd=.build/apple/Products/Release/maple-diffusion-cli
+    cmd=.build/apple/Products/Release/maple-diffusion
 else
-    cmd=.build/release/maple-diffusion-cli
+    cmd=.build/release/maple-diffusion
 fi
 file=.build/checkouts/XcodeProjKit/
 
