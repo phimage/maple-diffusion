@@ -12,14 +12,14 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.0"),
-        .package(url: "https://github.com/phimage/XcodeProjKit.git", from: "3.0.3")
+        .package(url: "https://github.com/mortenjust/maple-diffusion", from: "0.3")
     ],
     targets: [
         .executableTarget(
             name: "maple-diffusion",
             dependencies: [
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
-                "XcodeProjKit"],
+                .product(name: "MapleDiffusion", package: "maple-diffusion")],
             path: "Sources/main"
         )
     ]
